@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kallisté Vitalité — Naturopathie & accompagnement vers le mieux-être en Corse. Bilan de vitalité, accompagnement PHV, suivi durable avec Valentine.">
+  <title>Kallisté Vitalité — Naturopathie & Accompagnement en Corse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       KALLISTÉ VITALITÉ — Stylesheet
+       Naturopathie & Accompagnement
+    ============================================= */
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream:              #FAF5EF;
+      --blush:              #F5EDE3;
+      --terracotta:         #9B4F32;
+      --terracotta-light:   #C47A5A;
+      --terracotta-pale:    #EDD5C5;
+      --gold:               #B8945A;
+      --text-dark:          #3A2518;
+      --text-mid:           #7A5540;
+      --text-light:         #A8846E;
+      --white:              #FFFCF8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ——— NAVIGATION ——— */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: var(--white);
+      border-bottom: 0.5px solid var(--terracotta-pale);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--terracotta);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      display: block;
+      font-size: 0.62rem;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--terracotta); }
+
+    .nav-cta {
+      background: var(--terracotta);
+      color: var(--white);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.7rem 1.6rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-cta:hover { background: var(--terracotta-light); }
+
+    /* ——— HERO ——— */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 88vh;
+    }
+
+    .hero-left {
+      padding: 6rem 4rem 4rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 0.5px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.2rem;
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--terracotta);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      display: block;
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 300;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 2.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .hero-desc {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text-mid);
+      max-width: 400px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--white);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--terracotta-light); }
+
+    .btn-ghost {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      border: 0.5px solid var(--terracotta);
+      background: transparent;
+      padding: 1rem 2.2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-ghost:hover { background: var(--terracotta-pale); }
+
+    .hero-right {
+      background: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-illustration {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+    }
+
+    .hero-illustration svg {
+      max-height: 580px;
+      width: 100%;
+    }
+
+    /* ——— TRUST STRIP ——— */
+    .trust-strip {
+      background: var(--terracotta);
+      padding: 1.4rem 4rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: rgba(255,252,248,0.9);
+    }
+
+    .trust-item .icon { font-size: 1.1rem; flex-shrink: 0; }
+
+    .trust-text strong {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--white);
+    }
+
+    .trust-text small {
+      font-size: 0.72rem;
+      font-weight: 300;
+      opacity: 0.8;
+      letter-spacing: 0.04em;
+    }
+
+    .trust-sep {
+      width: 0.5px;
+      height: 2rem;
+      background: rgba(255,252,248,0.25);
+    }
+
+    /* ——— ABOUT ——— */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 0;
+      padding: 8rem 5rem;
+      align-items: center;
+    }
+
+    .about-visual { padding-right: 4rem; }
+
+    .about-card {
+      background: var(--white);
+      border: 0.5px solid var(--terracotta-pale);
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .about-card::before {
+      content: '✦';
+      position: absolute;
+      top: -0.8rem;
+      right: 2rem;
+      color: var(--gold);
+      font-size: 1.2rem;
+      background: var(--cream);
+      padding: 0 0.4rem;
+    }
+
+    .about-card::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 20px;
+      right: -8px;
+      top: 8px;
+      border: 0.5px solid var(--terracotta-pale);
+      z-index: -1;
+    }
+
+    .about-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--terracotta);
+      margin-bottom: 0.2rem;
+    }
+
+    .about-role {
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.8rem;
+    }
+
+    .about-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .about-fact {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    .about-fact::before {
+      content: '—';
+      color: var(--terracotta-light);
+      flex-shrink: 0;
+    }
+
+    .section-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 1.5rem;
+      height: 0.5px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--terracotta);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title em { font-style: italic; }
+
+    .section-body {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--text-mid);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ——— SERVICES ——— */
+    .services {
+      padding: 8rem 5rem;
+      background: var(--blush);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-header .section-eyebrow {
+      justify-content: center;
+    }
+
+    .services-header .section-eyebrow::before { display: none; }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: var(--terracotta-pale);
+    }
+
+    .section-divider-icon { color: var(--gold); font-size: 0.9rem; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--terracotta-pale);
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .service-card:hover { transform: translateY(-5px); }
+
+    .service-featured-badge {
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--terracotta);
+      color: var(--white);
+      font-size: 0.62rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.3rem 1.1rem;
+      white-space: nowrap;
+    }
+
+    .service-card.featured {
+      border-top: 2px solid var(--terracotta);
+    }
+
+    .service-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card.featured .service-icon { margin-top: 1rem; }
+
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--terracotta);
+      margin-bottom: 0.4rem;
+    }
+
+    .service-time {
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .service-desc {
+      font-size: 0.85rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 1.8rem;
+    }
+
+    .service-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--terracotta);
+    }
+
+    .service-price span {
+      font-size: 0.88rem;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-left: 0.3rem;
+    }
+
+    /* ——— APPROACH ——— */
+    .approach {
+      padding: 8rem 5rem;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .pillars {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pillar {
+      display: flex;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 0.5px solid var(--terracotta-pale);
+    }
+
+    .pillar:first-child { padding-top: 0; }
+    .pillar:last-child { border-bottom: none; }
+
+    .pillar-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--terracotta-pale);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 2.5rem;
+      text-align: right;
+    }
+
+    .pillar-title {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-text {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text-mid);
+    }
+
+    /* ——— TESTIMONIAL ——— */
+    .testimonial-section {
+      background: var(--terracotta);
+      padding: 6rem 5rem;
+    }
+
+    .testimonial-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .testimonial-stars {
+      color: var(--gold);
+      letter-spacing: 0.3rem;
+      margin-bottom: 1.8rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .testimonial-attr {
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,252,248,0.6);
+    }
+
+    /* ——— CONTACT ——— */
+    .contact {
+      padding: 8rem 5rem;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      padding: 0.85rem 1rem;
+      border: 0.5px solid var(--terracotta-pale);
+      background: var(--white);
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--terracotta-light);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-light);
+      opacity: 0.6;
+    }
+
+    .form-group textarea {
+      height: 130px;
+      resize: none;
+    }
+
+    .contact-info {}
+
+    .contact-detail {
+      margin-bottom: 2.2rem;
+    }
+
+    .contact-detail .label {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-detail .value {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--text-mid);
+      display: block;
+    }
+
+    .contact-detail .sub {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--text-light);
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .contact-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-light);
+      line-height: 1.75;
+      padding: 1.5rem;
+      border-left: 1.5px solid var(--terracotta-pale);
+      margin-top: 2rem;
+    }
+
+    /* ——— FOOTER ——— */
+    footer {
+      background: var(--text-dark);
+      padding: 3rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .footer-logo span {
+      display: block;
+      font-size: 0.6rem;
+      font-family: 'Jost', sans-serif;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--text-light);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--terracotta-light); }
+
+    /* ——— RESPONSIVE ——— */
+    @media (max-width: 1024px) {
+      nav { padding: 1rem 2rem; }
+      .nav-links { gap: 1.5rem; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 4rem 2.5rem 3rem; }
+      .hero-right { min-height: 50vh; }
+      .hero-title { font-size: 3.2rem; }
+      .trust-strip { padding: 1.2rem 2rem; gap: 0.8rem; }
+      .trust-sep { display: none; }
+      .about { grid-template-columns: 1fr; padding: 5rem 2.5rem; }
+      .about-visual { padding-right: 0; margin-bottom: 3rem; }
+      .services { padding: 5rem 2.5rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .approach { grid-template-columns: 1fr; padding: 5rem 2.5rem; gap: 3rem; }
+      .contact { grid-template-columns: 1fr; padding: 5rem 2.5rem; gap: 4rem; }
+      footer { padding: 2.5rem 2rem; flex-direction: column; text-align: center; align-items: center; }
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero-left { padding: 3rem 1.5rem 2rem; }
+      .hero-title { font-size: 2.6rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .trust-strip { padding: 1rem 1.5rem; }
+      .trust-item:nth-child(3), .trust-item:nth-child(7) { display: none; }
+      .about, .services, .approach, .contact { padding: 4rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .section-title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <a href="#" class="nav-logo">
+      Kallisté
+      <span>Vitalité</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#approach">Approche</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Prendre rendez-vous</a>
+  </nav>
+
+
+  <!-- ======== HERO ======== -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Naturopathie &amp; accompagnement</p>
+      <h1 class="hero-title">
+        Retrouvez<br>
+        <em>votre vitalité</em>
+      </h1>
+      <p class="hero-subtitle">Un accompagnement doux, personnalisé, ancré en Corse.</p>
+      <p class="hero-desc">Je vous accompagne vers un mieux-être durable, en harmonie avec votre corps et votre rythme de vie. Bilan de vitalité, programmes PHV, suivi personnalisé.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Réserver une consultation</a>
+        <a href="#about" class="btn-ghost">Découvrir</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-illustration">
+        <svg viewBox="0 0 520 580" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="260" cy="290" rx="180" ry="210" fill="#EDD5C5" opacity="0.35"/>
+          <ellipse cx="260" cy="290" rx="130" ry="155" fill="#EDD5C5" opacity="0.4"/>
+
+          <path d="M120 500 Q140 380 160 300 Q180 220 200 160" stroke="#B8945A" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M380 520 Q360 400 345 310 Q330 230 320 170" stroke="#B8945A" stroke-width="1" fill="none" opacity="0.5"/>
+
+          <ellipse cx="148" cy="320" rx="22" ry="10" fill="#C47A5A" opacity="0.3" transform="rotate(-35 148 320)"/>
+          <ellipse cx="138" cy="260" rx="18" ry="8" fill="#9B4F32" opacity="0.25" transform="rotate(-50 138 260)"/>
+          <ellipse cx="165" cy="200" rx="20" ry="9" fill="#C47A5A" opacity="0.3" transform="rotate(-25 165 200)"/>
+          <ellipse cx="358" cy="330" rx="22" ry="10" fill="#C47A5A" opacity="0.3" transform="rotate(30 358 330)"/>
+          <ellipse cx="348" cy="265" rx="18" ry="8" fill="#9B4F32" opacity="0.25" transform="rotate(45 348 265)"/>
+          <ellipse cx="328" cy="195" rx="20" ry="9" fill="#C47A5A" opacity="0.3" transform="rotate(20 328 195)"/>
+
+          <path d="M210 100 Q220 80 240 75 Q260 70 275 85 Q290 95 295 115 Q305 135 300 160 Q295 185 280 200 Q265 210 250 215 Q235 218 220 205 Q205 192 200 172 Q195 152 200 130 Q205 115 210 100Z"
+                fill="none" stroke="#9B4F32" stroke-width="1.2" opacity="0.5"/>
+
+          <circle cx="260" cy="340" r="140" fill="none" stroke="#B8945A" stroke-width="0.8" opacity="0.6"/>
+          <circle cx="260" cy="340" r="145" fill="none" stroke="#EDD5C5" stroke-width="2" opacity="0.5"/>
+
+          <path d="M230 275 Q215 290 210 320 Q205 360 208 400 Q210 430 215 450" stroke="#D4A574" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.8"/>
+          <path d="M290 275 Q305 290 308 320 Q312 360 310 400 Q308 430 305 450" stroke="#D4A574" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M240 265 Q250 260 260 258 Q270 260 280 265 Q295 280 300 300 Q302 320 298 340 Q290 375 275 430 Q265 450 260 460 Q255 450 245 430 Q230 375 222 340 Q218 320 220 300 Q225 280 240 265Z" fill="#D4A574" opacity="0.85"/>
+          <ellipse cx="260" cy="268" rx="22" ry="24" fill="#F0C9A0" opacity="0.9"/>
+          <path d="M252 272 Q255 275 258 272" stroke="#9B4F32" stroke-width="0.8" fill="none" opacity="0.6"/>
+          <path d="M262 272 Q265 275 268 272" stroke="#9B4F32" stroke-width="0.8" fill="none" opacity="0.6"/>
+          <path d="M255 280 Q260 284 265 280" stroke="#9B4F32" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <path d="M222 305 Q205 320 200 350" stroke="#C47A5A" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <path d="M298 305 Q315 320 320 350" stroke="#C47A5A" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <path d="M222 305 Q225 355 228 430 L292 430 Q295 355 298 305 Q280 295 260 293 Q240 295 222 305Z" fill="#9B4F32" opacity="0.55"/>
+
+          <path d="M200 490 Q220 470 240 465 Q260 460 280 465 Q300 470 320 490" stroke="#B8945A" stroke-width="0.8" fill="none" opacity="0.5"/>
+          <circle cx="215" cy="478" r="3" fill="#EDD5C5" opacity="0.8"/>
+          <circle cx="230" cy="470" r="2" fill="#C47A5A" opacity="0.7"/>
+          <circle cx="260" cy="468" r="3" fill="#EDD5C5" opacity="0.8"/>
+          <circle cx="290" cy="470" r="2" fill="#C47A5A" opacity="0.7"/>
+          <circle cx="305" cy="478" r="3" fill="#EDD5C5" opacity="0.8"/>
+
+          <text x="165" y="150" font-family="serif" font-size="14" fill="#B8945A" opacity="0.7" text-anchor="middle">✦</text>
+          <text x="355" y="175" font-family="serif" font-size="10" fill="#B8945A" opacity="0.6" text-anchor="middle">✦</text>
+          <text x="140" y="420" font-family="serif" font-size="8" fill="#C47A5A" opacity="0.5" text-anchor="middle">✦</text>
+          <text x="380" y="430" font-family="serif" font-size="12" fill="#B8945A" opacity="0.55" text-anchor="middle">✦</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== TRUST STRIP ======== -->
+  <div class="trust-strip">
+    <div class="trust-item">
+      <span class="icon">✦</span>
+      <div class="trust-text">
+        <strong>Depuis 2015</strong>
+        <small>Expertise en pharmacie &amp; naturopathie</small>
+      </div>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <span class="icon">✦</span>
+      <div class="trust-text">
+        <strong>En Corse</strong>
+        <small>Consultations en présentiel &amp; en ligne</small>
+      </div>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <span class="icon">✦</span>
+      <div class="trust-text">
+        <strong>Approche globale</strong>
+        <small>Corps, esprit &amp; terrain de vie</small>
+      </div>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <span class="icon">✦</span>
+      <div class="trust-text">
+        <strong>Suivi personnalisé</strong>
+        <small>Accompagnement sur-mesure &amp; durable</small>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======== ABOUT ======== -->
+  <section class="about" id="about">
+    <div class="about-visual">
+      <div class="about-card">
+        <div class="about-name">Valentine</div>
+        <div class="about-role">Naturopathe &amp; accompagnatrice bien-être</div>
+        <div class="about-facts">
+          <div class="about-fact">En pharmacie depuis 2015, formée à la naturopathie et à l'accompagnement holistique</div>
+          <div class="about-fact">Installée en Corse depuis 2023, au cœur de la nature insulaire</div>
+          <div class="about-fact">Passionnée par l'écoute du corps et le retour à l'essentiel</div>
+          <div class="about-fact">Spécialisée en bilan de vitalité, accompagnement PHV et suivi durable</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p class="section-eyebrow">À propos</p>
+      <h2 class="section-title">Une approche<br><em>humaine &amp; naturelle</em></h2>
+      <p class="section-body">Mon parcours en pharmacie m'a appris à écouter le corps dans sa globalité. La naturopathie est venue compléter cette vision : comprendre les causes profondes du déséquilibre, et non seulement traiter les symptômes.</p>
+      <p class="section-body">Je vous accompagne avec bienveillance, sans jugement, vers des changements durables qui respectent votre singularité et votre rythme de vie.</p>
+      <a href="#contact" class="btn-ghost">Me contacter</a>
+    </div>
+  </section>
+
+
+  <!-- ======== SERVICES / TARIFS ======== -->
+  <section class="services" id="tarifs">
+    <div class="services-header">
+      <p class="section-eyebrow">Prestations &amp; tarifs</p>
+      <h2 class="section-title">Ce que je vous propose</h2>
+    </div>
+    <div class="section-divider"><span class="section-divider-icon">✦</span></div>
+
+    <div class="services-grid">
+
+      <!-- Première consultation -->
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" stroke="#EDD5C5" stroke-width="1"/>
+          <path d="M20 8 Q24 14 24 20 Q24 26 20 32 Q16 26 16 20 Q16 14 20 8Z" fill="#EDD5C5" opacity="0.9"/>
+          <path d="M8 20 Q14 16 20 16 Q26 16 32 20 Q26 24 20 24 Q14 24 8 20Z" fill="#C47A5A" opacity="0.5"/>
+          <circle cx="20" cy="20" r="3" fill="#9B4F32" opacity="0.7"/>
+        </svg>
+        <div class="service-name">Première consultation</div>
+        <div class="service-time">1h30 · Bilan de vitalité complet</div>
+        <p class="service-desc">Un premier rendez-vous pour faire connaissance et dresser un bilan global de votre vitalité : hygiène de vie, alimentation, stress, sommeil, terrain constitutionnel.</p>
+        <div class="service-price">85 €<span>/ séance</span></div>
+      </div>
+
+      <!-- Pack bien-être (featured) -->
+      <div class="service-card featured">
+        <div class="service-featured-badge">Le plus choisi</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M20 5 L22 15 L32 12 L25 20 L32 28 L22 25 L20 35 L18 25 L8 28 L15 20 L8 12 L18 15 Z"
+                fill="#EDD5C5" opacity="0.9" stroke="#B8945A" stroke-width="0.8"/>
+        </svg>
+        <div class="service-name">Pack bien-être</div>
+        <div class="service-time">3h30 · Accompagnement PHV complet</div>
+        <p class="service-desc">Une consultation initiale suivie d'une consultation de suivi, pour un accompagnement en profondeur. Idéal pour initier une transformation durable.</p>
+        <div class="service-price">170 €<span>/ pack</span></div>
+      </div>
+
+      <!-- Suivi -->
+      <div class="service-card">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" stroke="#EDD5C5" stroke-width="1"/>
+          <path d="M14 20 Q17 14 20 20 Q23 26 26 20" stroke="#C47A5A" stroke-width="1.5" fill="none"/>
+          <circle cx="14" cy="20" r="2.5" fill="#EDD5C5"/>
+          <circle cx="26" cy="20" r="2.5" fill="#9B4F32" opacity="0.7"/>
+        </svg>
+        <div class="service-name">Suivi consultation</div>
+        <div class="service-time">1h · Accompagnement continu</div>
+        <p class="service-desc">Un rendez-vous de suivi pour faire le point sur vos avancées, ajuster le programme naturopathique et maintenir la dynamique de vitalité engagée.</p>
+        <div class="service-price">60 €<span>/ séance</span></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======== APPROACH ======== -->
+  <section class="approach" id="approach">
+    <div>
+      <p class="section-eyebrow">Mon approche</p>
+      <h2 class="section-title">Les piliers<br><em>de ma pratique</em></h2>
+      <p class="section-body">La naturopathie est une médecine douce qui considère l'être dans sa globalité. Ensemble, nous activons vos ressources naturelles de guérison.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-body">
+          <div class="pillar-title">Alimentation vitalité</div>
+          <p class="pillar-text">Rééquilibrer l'assiette pour nourrir le corps en profondeur, selon votre terrain et vos besoins spécifiques.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-body">
+          <div class="pillar-title">Plantes &amp; phytothérapie</div>
+          <p class="pillar-text">Utiliser les ressources de la nature pour soutenir les fonctions vitales, avec un regard formé en pharmacie.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-body">
+          <div class="pillar-title">Hygiène de vie globale</div>
+          <p class="pillar-text">Sommeil, gestion du stress, mouvement, connexion à la nature corse — des leviers puissants souvent négligés.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div class="pillar-body">
+          <div class="pillar-title">Suivi &amp; durabilité</div>
+          <p class="pillar-text">Des changements qui tiennent dans le temps, parce qu'ils sont adaptés à qui vous êtes vraiment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== TESTIMONIAL ======== -->
+  <section class="testimonial-section">
+    <div class="testimonial-inner">
+      <div class="testimonial-stars">✦ ✦ ✦ ✦ ✦</div>
+      <!-- TODO: Replace with a real client testimonial -->
+      <blockquote class="testimonial-quote">
+        « Valentine a su me guider avec douceur et bienveillance. Le bilan de vitalité m'a ouvert les yeux sur des déséquilibres que je n'aurais jamais soupçonnés. »
+      </blockquote>
+      <p class="testimonial-attr">— Marie, 38 ans · Bastia</p>
+    </div>
+  </section>
+
+
+  <!-- ======== CONTACT ======== -->
+  <section class="contact" id="contact">
+    <div>
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Prenons <em>contact</em></h2>
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Marie" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Dupont" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="marie@email.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="prestation">Prestation souhaitée</label>
+          <select id="prestation" name="prestation">
+            <option value="">Choisir une prestation...</option>
+            <option value="premiere">Première consultation — 85 €</option>
+            <option value="suivi">Suivi consultation — 60 €</option>
+            <option value="pack">Pack bien-être — 170 €</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Parlez-moi un peu de vous et de ce qui vous amène..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: fit-content;">Envoyer ma demande</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <p class="section-eyebrow" style="margin-bottom: 2.5rem;">Informations pratiques</p>
+
+      <!-- TODO: Fill in real contact details -->
+      <div class="contact-detail">
+        <span class="label">Localisation</span>
+        <span class="value">Corse, France</span>
+        <span class="sub">Consultations en présentiel &amp; en ligne</span>
+      </div>
+      <div class="contact-detail">
+        <span class="label">Email</span>
+        <span class="value">contact@kalliste-vitalite.fr</span>
+      </div>
+      <div class="contact-detail">
+        <span class="label">Réseaux sociaux</span>
+        <span class="value">@kalliste.vitalite</span>
+      </div>
+      <div class="contact-detail">
+        <span class="label">Délai de réponse</span>
+        <span class="value">48 heures ouvrées</span>
+      </div>
+
+      <p class="contact-note">
+        Chaque parcours commence par une conversation simple et sans engagement. N'hésitez pas à me partager ce qui vous tient à cœur.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    <a href="#" class="footer-logo">
+      Kallisté
+      <span>Vitalité — Naturopathie &amp; accompagnement</span>
+    </a>
+    <p class="footer-copy">© 2025 Kallisté Vitalité · Tous droits réservés</p>
+    <ul class="footer-links">
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Politique de confidentialité</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
